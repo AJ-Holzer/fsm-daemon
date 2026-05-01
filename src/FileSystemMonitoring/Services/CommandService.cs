@@ -1,7 +1,7 @@
 using System.IO.Pipes;
 using System.Threading.Channels;
 
-namespace FileMonitoring.Services;
+namespace FileSystemMonitoring.Services;
 
 public class CommandService(string pipeName)
 {

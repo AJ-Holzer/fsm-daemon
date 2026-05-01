@@ -1,4 +1,4 @@
-namespace FileMonitoring;
+namespace FileSystemMonitoring;
 
 public class Worker(ILogger<Worker> logger) : BackgroundService
 {

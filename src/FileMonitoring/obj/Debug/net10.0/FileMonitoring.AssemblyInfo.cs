@@ -10,11 +10,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-FileMonitoring-acbde7f5-bac5-484d-b88a-119ebb090bf8")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileMonitoring")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56dd871c0a0efd59e4a8195518ca4d3064b7a55a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileMonitoring")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileMonitoring")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

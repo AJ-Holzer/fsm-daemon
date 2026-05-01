@@ -1,4 +1,4 @@
-namespace FileMonitoring;
+namespace FileSystemMonitoring;
 
 internal static class Program
 {
