@@ -1,5 +1,8 @@
+using System.Data;
 using System.IO.Pipes;
 using System.Threading.Channels;
+using FileSystemMonitoring.Utils;
+using FileSystemMonitoring.Utils.Models;
 
 namespace FileSystemMonitoring.Services;
 
@@ -9,6 +12,8 @@ public class CommandService(string pipeName)
 
     private async Task<string> ProcessCommand(CancellationToken ct, string command)
     {
+        Command parsedCommand = CommandUtils.ParseCommand(commandString: command);
+
         return "";
     }
 

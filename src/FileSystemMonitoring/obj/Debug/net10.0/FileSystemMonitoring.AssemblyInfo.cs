@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-FileSystemMonitoring-44bf8a5a-0ccd-4e72-a55a-b29d4aa1219b")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FileSystemMonitoring")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1db87e1b55e04e0c59c8bfa4b6dd96b06fd374b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d86fb6650da94d2eea73398d9317dce86c18028")]
 [assembly: System.Reflection.AssemblyProductAttribute("FileSystemMonitoring")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FileSystemMonitoring")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

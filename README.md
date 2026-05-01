@@ -1,6 +1,9 @@
 # FSM-Daemon
 
-The FSM-Daemon (FileSystemManagement-Daemon) is used to make sure your files follow your _custom or a predefined_ naming convention.
+The FSM-Daemon (FileSystemManagement-Daemon) is used to make sure your files follow your **custom or a predefined** naming convention.
+
+> [!warning]
+> 🚧 This project is still a work in progress and some functionality might not be included yet.
 
 ## Introduction
 

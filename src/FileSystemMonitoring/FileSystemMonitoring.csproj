@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-FileMonitoring-acbde7f5-bac5-484d-b88a-119ebb090bf8</UserSecretsId>
+    <UserSecretsId>dotnet-FileSystemMonitoring-44bf8a5a-0ccd-4e72-a55a-b29d4aa1219b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
