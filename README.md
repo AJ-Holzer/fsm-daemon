@@ -9,7 +9,7 @@ The FSM-Daemon (FileSystemManagement-Daemon) is used to make sure your files fol
 
 ### How does it work?
 
-The Daemon runs in the background and monitors all of your files specified. If you create, move or rename any of them the daemon will check the name of it and rename it if needed.
+The Daemon runs in the background and monitors all of your files specified. If you create, move or rename any of them the daemon will check the name and rename it if needed.
 
 For example you only want your files to be snake_case and you create a file called `New File.txt` it will be automatically renamed to `new_file.txt`.
 So, this daemon makes sure all your files follow a specific naming convention.
