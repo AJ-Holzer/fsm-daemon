@@ -1,19 +1,41 @@
-using System.Data;
 using System.IO.Pipes;
-using System.Threading.Channels;
-using FileSystemMonitoring.Utils;
-using FileSystemMonitoring.Utils.Models;
+using FileSystemMonitoring.Handlers.CommandHandlers.Interfaces;
 
 namespace FileSystemMonitoring.Services;
 
-public class CommandService(string pipeName)
+public class CommandService(string pipeName, IEnumerable<ICommandHandler> commandHandlers)
 {
     private readonly string _pipeName = pipeName;
+    private readonly IEnumerable<ICommandHandler> _commandHandlers = commandHandlers;
+
+    private IDictionary<string, ICommandHandler> _indexedHandlers;
+
+    /// <summary>
+    /// Index handlers using their commands.
+    /// </summary>
+    /// <param name="ct"></param>
+    /// <exception cref="InvalidOperationException"></exception>
+    private void IndexHandlers()
+    {
+        // Index handlers
+        foreach (ICommandHandler handler in _commandHandlers)
+        {
+            foreach (string command in handler.Commands)
+            {
+                // Check for duplicate command
+                if (_indexedHandlers.ContainsKey(command))
+                    throw new InvalidOperationException(
+                        $"Command '{command}' does already exist in '{_indexedHandlers[command]}'!"
+                    );
+
+                // Index handler
+                _indexedHandlers[command] = handler;
+            }
+        }
+    }
 
     private async Task<string> ProcessCommand(CancellationToken ct, string command)
     {
-        Command parsedCommand = CommandUtils.ParseCommand(commandString: command);
-
         return "";
     }
 
@@ -31,6 +53,7 @@ public class CommandService(string pipeName)
         // Wait for connections
         await pipe.WaitForConnectionAsync(cancellationToken: ct);
 
+        // TODO: Check if this really works
         using StreamReader reader = new(pipe);
         using StreamWriter writer = new(pipe);
 
@@ -63,5 +86,11 @@ public class CommandService(string pipeName)
                 break;
             }
         }
+    }
+
+    public async Task StartSync(CancellationToken ct)
+    {
+        IndexHandlers();
+        await Listen(ct: ct);
     }
 }
