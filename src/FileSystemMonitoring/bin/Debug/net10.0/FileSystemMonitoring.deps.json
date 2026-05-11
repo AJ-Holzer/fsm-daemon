@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v10.0": {
       "FileSystemMonitoring/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Hosting": "10.0.4"
+          "Microsoft.Extensions.Hosting": "10.0.4",
+          "YamlDotNet": "17.1.0"
         },
         "runtime": {
           "FileSystemMonitoring.dll": {}
@@ -395,6 +396,14 @@
             "fileVersion": "10.0.426.12010"
           }
         }
+      },
+      "YamlDotNet/17.1.0": {
+        "runtime": {
+          "lib/net10.0/YamlDotNet.dll": {
+            "assemblyVersion": "17.0.0.0",
+            "fileVersion": "17.1.0.0"
+          }
+        }
       }
     }
   },
@@ -599,6 +608,13 @@
       "sha512": "sha512-xXo5NcIPeMUMfpo9Efl/3Rgomjb/Jfa3Aa0BgSfqYctN4YpwjPzvIrnD9JTwoKqe3pFtLF9vmtMl892+wwZ6EA==",
       "path": "system.diagnostics.eventlog/10.0.4",
       "hashPath": "system.diagnostics.eventlog.10.0.4.nupkg.sha512"
+    },
+    "YamlDotNet/17.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AhsNXgeAs3Ugt653t8LC44xXDuldFfwBpWbWX9pN3e4Yg8U5Bk8jLn8eXtGv5HV2V2nHu7F46fqsPC+tpcTGAA==",
+      "path": "yamldotnet/17.1.0",
+      "hashPath": "yamldotnet.17.1.0.nupkg.sha512"
     }
   }
 }

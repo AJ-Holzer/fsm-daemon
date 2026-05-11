@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+LIAKOM1sr8=",
+  "dgSpecHash": "8UuJyAJsbxw=",
   "success": true,
   "projectFilePath": "/run/media/veracrypt1/data/projects/file_monitor/file_monitor/src/FileSystemMonitoring/FileSystemMonitoring.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "/home/ajholzer/.nuget/packages/microsoft.extensions.options.configurationextensions/10.0.4/microsoft.extensions.options.configurationextensions.10.0.4.nupkg.sha512",
     "/home/ajholzer/.nuget/packages/microsoft.extensions.primitives/10.0.4/microsoft.extensions.primitives.10.0.4.nupkg.sha512",
     "/home/ajholzer/.nuget/packages/system.diagnostics.eventlog/10.0.4/system.diagnostics.eventlog.10.0.4.nupkg.sha512",
+    "/home/ajholzer/.nuget/packages/yamldotnet/17.1.0/yamldotnet.17.1.0.nupkg.sha512",
     "/home/ajholzer/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.4/microsoft.aspnetcore.app.ref.10.0.4.nupkg.sha512"
   ],
   "logs": []

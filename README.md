@@ -16,20 +16,36 @@ So, this daemon makes sure all your files follow a specific naming convention.
 
 ## Configuration
 
-This daemon comes with a CLI control client which is able to control the daemon via an _IPC Pipe_ and it works on Windows and Linux. _Probably on Mac too but I have not tested it yet..._
+To configure the daemon you need to edit the generated config file which is located in:
 
-### CLI Commands
+- **Linux:** `/home/$USER/.config/fmsmdaemon/config.yaml`
 
-- `fsdaemon`:
-  - `--help`: Shows the help command.
-  - `--start`: Starts the daemon.
-  - `--stop`: Stops the daemon.
-  - `--restart`: Restarts the daemon and reloads the config file.
-  - `--pause`: Pauses monitoring and returns to standby. **NOTE: The files created, moved or renamed in that time will not be renamed after continuing the monitoring.**
-  - `--continue`: Continues the monitoring.
-  - `--add-folder FOLDER_PATH`: Adds the specified folder to monitor where _FOLDER_PATH_ needs to be replaced by the folder you want to add.
-  - `--remove-folder FOLDER_PATH`: Removes a folder from monitoring where _FOLDER_PATH_ needs to be replaced by the folder you want to remove.
-  - `--switch-naming-convention NAME`: Switches the naming convention for files where _NAME_ needs to be replaced by the name of the convention.
-  - `--add-naming-convention NAME NAMING_CONVENTION`: Adds a custom naming convention where _NAME_ needs to be replaced with the name and _NAMING_CONVENTION_ needs to be replaced by the new convention.
-  - `--update-naming-convention NAME NAMING_CONVENTION`: Updates an existing naming convention where _NAME_ needs to be replaced by the name and _NAMING_CONVENTION_ by the new convention.
-  - `--remove-naming-convention NAME`: Removes a custom naming convention where _NAME_ needs to be replaced with the name of the naming convention.
+### Config Options
+
+**Example config:**
+
+```yaml
+# Naming convention rules
+namingRegex: "[^a-z0-9\\.]"
+separator: "_"
+lowercaseExtension: true
+renameDelay: 100
+
+# These paths will be monitored by the daemon but the excluded paths will be respected
+includedPaths:
+  - "~/Downloads"
+
+# These paths will be ignored by the daemon
+excludedPaths:
+  - "bin"
+  - "/tmp"
+```
+
+**Options:**
+
+- `namingRegex`: The regex which will be applied to a sub-string of the filename. These specified characters will be replaced with the separator. Check out the [regex documentation](https://regular-expressions.info/) if you need help with the syntax.
+- `separator`: The separator which will be used to split parts of the new filename. For example to replace special characters.
+- `lowercaseExtension`: Whether to lowercase the extension to avoid something like `.PNG` which older programs might use.
+- `renameDelay`: The delay to wait before renaming a file or folder.
+- `includedPaths`: These paths will be monitored but excluded paths will still be ignored.
+- `excludedPaths`: These paths will be excluded and therefore no file or folder within these folders will not be renamed.

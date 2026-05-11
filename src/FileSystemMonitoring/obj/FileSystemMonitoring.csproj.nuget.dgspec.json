@@ -47,6 +47,10 @@
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
               "version": "[10.0.4, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[17.1.0, )"
             }
           },
           "imports": [

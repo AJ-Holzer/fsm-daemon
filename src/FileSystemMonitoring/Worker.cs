@@ -1,16 +1,13 @@
+using FileSystemMonitoring.Services.Interfaces;
+
 namespace FileSystemMonitoring;
 
-public class Worker(ILogger<Worker> logger) : BackgroundService
+public class Worker(IService fsRenameService) : BackgroundService
 {
+    private readonly IService _fsRenameService = fsRenameService;
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        while (!stoppingToken.IsCancellationRequested)
-        {
-            if (logger.IsEnabled(LogLevel.Information))
-            {
-                logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            }
-            await Task.Delay(1000, stoppingToken);
-        }
+        await _fsRenameService.RunAsync(ct: stoppingToken);
     }
 }

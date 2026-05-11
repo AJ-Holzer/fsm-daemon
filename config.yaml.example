@@ -1,0 +1,16 @@
+# Naming convention rules
+NamingRegex: "[^a-z0-9\\.]"
+Separator: "_"
+LowercaseExtension: true
+RenameDelay: 100
+
+# These paths will be monitored by the daemon but the excluded paths will be respected
+IncludedPaths:
+  - "/home/$USER"
+
+# These paths will be ignored by the daemon
+ExcludedPaths:
+  - "excluded"
+
+ExcludedFilenames:
+  - "README.md"

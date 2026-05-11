@@ -47,3 +47,4 @@
 /run/media/veracrypt1/data/projects/file_monitor/file_monitor/src/FileSystemMonitoring/obj/Debug/net10.0/FileSystemMonitoring.pdb
 /run/media/veracrypt1/data/projects/file_monitor/file_monitor/src/FileSystemMonitoring/obj/Debug/net10.0/FileSystemMonitoring.genruntimeconfig.cache
 /run/media/veracrypt1/data/projects/file_monitor/file_monitor/src/FileSystemMonitoring/obj/Debug/net10.0/ref/FileSystemMonitoring.dll
+/run/media/veracrypt1/data/projects/file_monitor/file_monitor/src/FileSystemMonitoring/bin/Debug/net10.0/YamlDotNet.dll
