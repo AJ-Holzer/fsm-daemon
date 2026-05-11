@@ -3,7 +3,7 @@
 The FSM-Daemon (FileSystemManagement-Daemon) is used to make sure your files follow your **custom or a predefined** naming convention.
 
 > [!warning]
-> 🚧 This project is still a work in progress and some functionality might not be included yet.
+> 🚧 This project is currently an **alpha version**. If you encounter any bugs or have some ideas and tips for improvement open an issue or a pull request. I would be happy to upgrade it and make it even better.
 
 ## Introduction
 
@@ -13,6 +13,18 @@ The Daemon runs in the background and monitors all of your files specified. If y
 
 For example you only want your files to be snake_case and you create a file called `New File.txt` it will be automatically renamed to `new_file.txt`.
 So, this daemon makes sure all your files follow a specific naming convention.
+
+## Installation
+
+You need to compile it by yourself as i am too lazy to do so.
+
+Simply install the `dotnet` CLI tool and run the following command:
+
+```shell
+dotnet publish src/FileSystemMonitoring -c Release --self-contained /p:PublishTrimmed=true /p:PublishSingleFile=true -o ./out/release
+```
+
+Now your files are located in `out/release`. You can run the file now and watch the magic work.
 
 ## Configuration
 
